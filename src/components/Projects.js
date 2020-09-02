@@ -1,10 +1,14 @@
 import React from 'react'
-import styles from '../styles/Main-style.module.css'
+import styles from '../styles/Projects-style.module.css'
+import Project from '../components/Project'
 
 function Projects() {
     return (
-        <div className={styles.container1}>
-            <h1>Hello</h1>
+        <div id='projects' className={styles.projectsContainer}>
+            <Project name={'project1'} />
+            <Project name={'project2'} />
+            <Project name={'project3'} />
+            <Project name={'project4'} />
         </div>
     )
 

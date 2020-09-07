@@ -1,20 +1,43 @@
-.header {
-    text-align: center;
-    width: 100%;
-    color: rgb(24, 24, 24);
-    padding-top: 40vh;
-    font-family: 'Bad Script', cursive;
-    font-size: 175px;
-    text-transform: uppercase;
-}
-
 .container {
     display: flex;
     height: 100vh;
 
-    background-image: url('../images/business.jpg');
+    background-image: url('../images/business-center.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+}
+
+.containerMobile {
+    display: flex;
+    height: 120vh;
+    
+    background-image: url('../images/business-mini.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    width: 100%;
+    padding-top: 40vh;
+
+    text-align: center;
+    font-family: 'Bad Script', cursive;
+    font-size: 175px;
+    text-transform: uppercase;
+    color: rgb(24, 24, 24);
+}
+
+.headerMobile {
+    width: 100%;
+    padding-top: 50vh;
+
+    text-align: center;
+    font-family: 'Bad Script', cursive;
+    font-size: 75px;
+    text-transform: uppercase;
+    color: rgb(24, 24, 24);
 }

@@ -1,21 +1,23 @@
-.navbar {
-    background-color: brown;
-    height: 100vh;
+.container {
     width: 100%;
+    background-color: rgba(146, 29, 37, 237);
+}
+.mobileContainer{
+    width: 0vw;
 }
 
-nav {
-    padding-top: 50vh;
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
 }
 
 ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     list-style: none;
     font-family: 'Bad Script', cursive;
     font-size: 50px;
-    color: rosybrown;
 }
 
 a {
@@ -25,4 +27,89 @@ a {
 
 a:hover, a:active {
     color: red;
+}
+
+/* mobile button */
+
+.menuButton {
+    position: fixed;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+    display: block;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-indent: -9999px;
+    border: none;
+    border-radius: none;
+    background-color: #ff3264;
+    box-shadow: none;
+    font-size: 0;
+    appearance: none;
+}
+
+.menuButton:focus {
+    outline: none;
+}
+
+.menuButton span {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    left: 10px;
+    display: block;
+    height: 6px;
+    transition: background 0s 0.3s;
+    background: white;
+}
+
+.menuButton span::before, .menuButton span::after {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 6px;
+    content: "";
+    transition-delay: 0.3s, 0s;
+    transition-duration: 0.3s, 0.3s;
+    background-color: #fff;
+}
+
+.menuButton span::before {
+    top: -10px;
+    transition-property: top, transform;
+}
+
+.menuButton span::after {
+    bottom: -10px;
+    transition-property: bottom, transform;
+}
+
+/* Is active */
+
+.menuButton.is-active {
+    background-color: #cb0032;
+}
+
+.menuButton.is-active span {
+    background: none;
+}
+
+.menuButton.is-active span::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.menuButton.is-active span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.menuButton.is-active span::before, .menuButton.is-active span::after {
+    transition-delay: 0.2s, 0s;
 }

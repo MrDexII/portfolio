@@ -6,17 +6,17 @@ import Contact from './Contact'
 
 import styles from '../styles/Main-style.module.css'
 
-function Main() {
+function Main({ isMobile }) {
     return (
-        <div className={styles.container}>
-            <About />
-            <div className={styles.projectContainer}>
-                <Nav />
+        <div className={styles.rowContainer}>
+            <Nav isMobile={isMobile} />
+            <div id='scrollBar' className={styles.columnContainer}>
+                <About />
                 <Projects />
+                <Contact />
             </div>
-            <Contact />
         </div>
-    );
+    )
 }
 
 export default Main

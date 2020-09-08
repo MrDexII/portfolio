@@ -2,22 +2,20 @@
     width: 100%;
     background-color: rgba(146, 29, 37, 237);
 }
-.mobileContainer{
+
+.mobileContainer {
     width: 0vw;
 }
-
 
 .navbar {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
-}
 
-ul {
     list-style: none;
     font-family: 'Bad Script', cursive;
-    font-size: 50px;
+    font-size: 35px;
 }
 
 a {
@@ -92,24 +90,49 @@ a:hover, a:active {
 
 /* Is active */
 
-.menuButton.is-active {
+.menuButton.isActive {
     background-color: #cb0032;
 }
 
-.menuButton.is-active span {
+.menuButton.isActive span {
     background: none;
 }
 
-.menuButton.is-active span::before {
+.menuButton.isActive span::before {
     top: 0;
     transform: rotate(45deg);
 }
 
-.menuButton.is-active span::after {
+.menuButton.isActive span::after {
     bottom: 0;
     transform: rotate(-45deg);
 }
 
-.menuButton.is-active span::before, .menuButton.is-active span::after {
+.menuButton.isActive span::before, .menuButton.isActive span::after {
     transition-delay: 0.2s, 0s;
+}
+
+/* Mobile Menu */
+
+.mobileMenu {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: inherit;
+    background-color: aliceblue;
+}
+
+.mobileNav {
+    display: flex;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+}
+
+.mobileNav li {
+    list-style: none;
+    font-family: 'Bad Script', cursive;
+    font-size: 30px;
 }

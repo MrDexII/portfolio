@@ -1,12 +1,3 @@
-.rowContainer {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-}
-
-.columnContainer {
-    width: 100%;
-    height: 100vh;
-
-    overflow: auto;
+.container{
+    
 }

@@ -1,10 +1,11 @@
 import React from 'react'
+import Nav from './Nav'
 import styles from '../styles/Header-style.module.css'
 
-function Header({ isMobile }) {
+function Header() {
     return (
-        <div className={isMobile ? styles.containerMobile : styles.container}>
-            <h1 className={isMobile ? styles.headerMobile : styles.header} >Hello</h1>
+        <div id="home" className={styles.container}>
+        <h1>hello header</h1>
         </div>
     )
 }

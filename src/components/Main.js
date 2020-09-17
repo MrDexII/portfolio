@@ -6,15 +6,12 @@ import Contact from './Contact'
 
 import styles from '../styles/Main-style.module.css'
 
-function Main({ isMobile }) {
+function Main() {
     return (
-        <div className={styles.rowContainer}>
-            <Nav isMobile={isMobile} />
-            <div id='scrollBar' className={styles.columnContainer}>
-                <About />
-                <Projects />
-                <Contact />
-            </div>
+        <div>
+            <About />
+            {/* <Projects /> */}
+            {/* <Contact /> */}
         </div>
     )
 }

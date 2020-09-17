@@ -1,51 +1,78 @@
+/* https://coolors.co/000000-3e92cc-9c9c9c-0d3a59-ffffff */
+
+/* color: #000000;
+    color: #0d3a59;
+    color: #3e92cc;
+    color: #9c9c9c;
+    color: #ffffff; */
+
 .container {
-    width: 100%;
-    background-color: rgba(146, 29, 37, 237);
-}
-
-.mobileContainer {
-    width: 0vw;
-}
-
-.navbar {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-
-    list-style: none;
-    font-family: 'Bad Script', cursive;
-    font-size: 35px;
+    justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    background: #9C9C9C;
 }
 
-a {
+.wrapper {
+    width: 100%;
+    height: 70px;
+}
+
+.navigation {
+    width: 100%;
+    list-style-type: none;
+    font-size: 2.8rem;
+}
+
+.navigation li {
+    padding: 10px;
+    margin: 0 10px;
+    transition: 1s;
+}
+
+.navigation a {
     text-decoration: none;
-    color: red;
+    color: #fff;
+    padding: 0 10px;
 }
 
-a:hover, a:active {
-    color: red;
+.navigation img {
+    width: 2rem;
+    height: 2rem;
 }
+
+.mobile {
+    display: none;
+}
+
+/* .logo {
+    display: block;
+    background: url("../images/logo.svg") center / contain no-repeat;
+    width: 100%;
+    height: 100%;
+} */
 
 /* mobile button */
 
 .menuButton {
     position: fixed;
     z-index: 2;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    right: 10px;
     display: block;
     overflow: hidden;
-    width: 48px;
-    height: 48px;
-    margin: 0;
-    padding: 0;
+    width: 60px;
+    height: 60px;
+    padding: 1%;
     cursor: pointer;
     transition: background 0.3s;
     text-indent: -9999px;
     border: none;
     border-radius: none;
-    background-color: #ff3264;
+    background-color: #9C9C9C;
     box-shadow: none;
     font-size: 0;
     appearance: none;
@@ -90,10 +117,6 @@ a:hover, a:active {
 
 /* Is active */
 
-.menuButton.isActive {
-    background-color: #cb0032;
-}
-
 .menuButton.isActive span {
     background: none;
 }
@@ -110,29 +133,4 @@ a:hover, a:active {
 
 .menuButton.isActive span::before, .menuButton.isActive span::after {
     transition-delay: 0.2s, 0s;
-}
-
-/* Mobile Menu */
-
-.mobileMenu {
-    width: inherit;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: inherit;
-    background-color: aliceblue;
-}
-
-.mobileNav {
-    display: flex;
-    z-index: 1;
-    height: 100vh;
-    width: 100vw;
-}
-
-.mobileNav li {
-    list-style: none;
-    font-family: 'Bad Script', cursive;
-    font-size: 30px;
 }

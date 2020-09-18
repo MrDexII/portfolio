@@ -10,8 +10,8 @@ function Main() {
     return (
         <div>
             <About />
-            {/* <Projects /> */}
-            {/* <Contact /> */}
+            <Projects />
+            <Contact />
         </div>
     )
 }

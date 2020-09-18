@@ -1,10 +1,10 @@
 /* https://coolors.co/000000-3e92cc-9c9c9c-0d3a59-ffffff */
 
-/* color: #000000;
-    color: #0d3a59;
-    color: #3e92cc;
+/*  color: #000000;
+    color: #ffffff;
     color: #9c9c9c;
-    color: #ffffff; */
+    color: #0d3a59;
+    color: #3e92cc;*/
 
 .container {
     display: flex;
@@ -13,7 +13,7 @@
     justify-content: flex-start;
     position: sticky;
     top: 0;
-    background: #9C9C9C;
+    background: #3e92cc;
 }
 
 .wrapper {
@@ -59,7 +59,7 @@
 
 .menuButton {
     position: fixed;
-    z-index: 2;
+    /* z-index: 2; */
     top: 10px;
     right: 10px;
     display: block;
@@ -72,7 +72,7 @@
     text-indent: -9999px;
     border: none;
     border-radius: none;
-    background-color: #9C9C9C;
+    background-color: #3e92cc;
     box-shadow: none;
     font-size: 0;
     appearance: none;
@@ -89,7 +89,7 @@
     left: 10px;
     display: block;
     height: 6px;
-    transition: background 0s 0.3s;
+    transition: background 0s 0s;
     background: white;
 }
 

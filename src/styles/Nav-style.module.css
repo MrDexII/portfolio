@@ -44,8 +44,10 @@
     height: 2rem;
 }
 
-.mobile {
-    display: none;
+.logo {
+    height: 90px;
+    margin-top: -5px;
+    margin-left: 5px;
 }
 
 /* .logo {
@@ -59,7 +61,6 @@
 
 .menuButton {
     position: fixed;
-    /* z-index: 2; */
     top: 10px;
     right: 10px;
     display: block;

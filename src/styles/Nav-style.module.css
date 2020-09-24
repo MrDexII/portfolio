@@ -1,19 +1,12 @@
-/* https://coolors.co/000000-3e92cc-9c9c9c-0d3a59-ffffff */
-
-/*  color: #000000;
-    color: #ffffff;
-    color: #9c9c9c;
-    color: #0d3a59;
-    color: #3e92cc;*/
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    position: sticky;
+    position: fixed;
     top: 0;
     background: #3e92cc;
+    width: 100%;
 }
 
 .wrapper {

@@ -1,4 +1,15 @@
+/*https://coolors.co/0d2130-3e92cc-9c9c9c-0d3a59-ffffff*/
+
+h6 {
+    color: #0d2130;
+    color: #0d3a59;
+    color: #3e92cc;
+    color: #9c9c9c;
+    color: #ffffff;
+}
+
 /* reset  */
+
 html {
     box-sizing: border-box;
     font-size: 10px;
@@ -14,17 +25,17 @@ html {
 
 html::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: #9c9c9c;
+    /* border-radius: 10px; */
+    background-color: white;
 }
 
 html::-webkit-scrollbar {
-    width: 12px;
+    width: 5px;
     background-color: #3e92cc;
 }
 
 html::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    /* border-radius: 10px; */
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
     background-color: #3e92cc;
 }

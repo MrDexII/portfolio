@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+}
+
+.title {
+    background: #0d3a59;
+    height: 20%;
+    margin-bottom: 20px;
+}
+
+.title h1, .title p {
+    color: white;
+    padding: 10px;
+}
+
+.title p {
+    padding: 20px;
+}
+
+.projectsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    height: 80%;
+}

@@ -9,7 +9,7 @@ import styles from '../styles/Main-style.module.css'
 function Main() {
     return (
         <div>
-            <About />
+            {/* <About /> */}
             <Projects />
             <Contact />
         </div>

@@ -1,0 +1,18 @@
+.container{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0 20px; 
+    background: #0d2130;
+    text-decoration: none;
+}
+
+.container:last-child{
+    margin-bottom: 20px;
+}
+
+.title{
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}

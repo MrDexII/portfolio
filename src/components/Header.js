@@ -1,5 +1,4 @@
 import React from 'react'
-import Nav from './Nav'
 import styles from '../styles/Header-style.module.css'
 import me from '../images/me.png'
 

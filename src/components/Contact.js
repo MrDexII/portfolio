@@ -1,9 +1,15 @@
-import { logDOM } from '@testing-library/react';
 import React, { useState } from 'react'
 import styles from '../styles/Contact-style.module.css'
 
 function Contact() {
-    const [formData, setFormData] = useState({ name: "", email: "", content: "" });
+    const defaultFormData = {
+        name: "",
+        email: "",
+        content: ""
+    }
+
+    const [formData, setFormData] = useState(defaultFormData)
+    const [serverMassage, setServerMassage] = useState("")
 
     const handleFormChange = ({ target }) => {
         setFormData((prevState) => {
@@ -14,20 +20,22 @@ function Contact() {
     const handleSubmitForm = (event) => {
         event.preventDefault()
         const sendEmail = async () => {
-            const url = "http://localhost:8080/send-email"
-            const response = await fetch(url,{
+            const url = "http://localhost:8080/api/send-email"
+            const response = await fetch(url, {
                 method: 'POST',
                 mode: 'cors',
                 cache: 'no-cache',
-                headers:{
+                headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(formData)
             })
-            return response.json()
+            const message = await response.text()
+            // console.log(message)
+            setServerMassage(message)
         }
-        const response = sendEmail();
-        console.log(response);
+        sendEmail()
+        setFormData(defaultFormData)
     }
 
     return (
@@ -39,6 +47,7 @@ function Contact() {
                 <label htmlFor="name">Name</label>
                 <input type="text" value={formData.name} id="name" name="name" onChange={handleFormChange} />
                 <textarea name="content" value={formData.content} rows="10" onChange={handleFormChange}></textarea>
+                <label>{serverMassage}</label>
                 <button type="submit">Submit</button>
             </form>
         </div>

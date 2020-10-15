@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from '../styles/Project-style.module.css'
 
-function Project({ name }) {
+function Project({ svg }) {
     return (
-        <a className={styles.container} href="">
-            <h2 className={styles.title}>{name}</h2>
-        </a>
+        <div className={styles.container}>
+            {svg}
+        </div>
     )
 }
 

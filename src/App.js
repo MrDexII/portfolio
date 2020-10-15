@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './components/Header'
+import Hero from './components/Hero'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import Nav from './components/Nav'
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Nav />
-      <Header />
+      <Hero />
       <Main />
       <Footer />
     </>

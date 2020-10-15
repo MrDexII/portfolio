@@ -1,8 +1,8 @@
 import React from 'react'
-import styles from '../styles/Header-style.module.css'
+import styles from '../styles/Hero-style.module.css'
 import me from '../images/me.png'
 
-function Header() {
+function Hero() {
     return (
         <div id="home" className={styles.container}>
             <h1 className={styles.title}>Cześć</h1>
@@ -12,4 +12,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Hero

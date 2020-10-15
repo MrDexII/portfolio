@@ -2,16 +2,36 @@
     height: 100vh;
     padding-top: 70px;
     background: #0d3a59;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .title {
-    color: white;
     height: 10%;
+    color: white;
+    font-size: 3rem;
 }
 
-.navigation {
+.secondTitle {
+    height: 10%;
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.container ul {
+    text-align: center;
+    font-size: 1.6rem;
+    list-style-type: none;
+}
+
+.container ul a {
     display: block;
-    height: 90%;
+    text-decoration: none;
+    color: #cdcdcd;
+    padding: 20px;
 }
 
 .links {
@@ -19,6 +39,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 2rem 0;
+    width: 100%;
 }
 
 .links span {

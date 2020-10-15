@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from '../styles/Project-style.module.css'
 
-function Project({ svg }) {
+function Project({ svg, name }) {
     return (
-        <div className={styles.container}>
+        <div id={name} className={styles.container}>
             {svg}
         </div>
     )

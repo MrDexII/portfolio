@@ -18,9 +18,10 @@ function Contact() {
     }
 
     const handleSubmitForm = (event) => {
+        const host = "http://localhost:8080/"
         event.preventDefault()
         const sendEmail = async () => {
-            const url = "http://localhost:8080/api/send-email"
+            const url = host + "api/send-email"
             const response = await fetch(url, {
                 method: 'POST',
                 mode: 'cors',
@@ -31,7 +32,6 @@ function Contact() {
                 body: JSON.stringify(formData)
             })
             const message = await response.text()
-            // console.log(message)
             setServerMassage(message)
         }
         sendEmail()

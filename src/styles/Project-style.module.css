@@ -8,9 +8,9 @@
     border-radius: 5px;
 }
 
-.container:last-child {
+/* .container:last-child {
     margin-bottom: 20px;
-}
+} */
 
 .container svg {
     height: 100px;

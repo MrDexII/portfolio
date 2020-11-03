@@ -1,13 +1,12 @@
 .container {
     display: flex;
     flex-direction: column;
-    padding-top: 70px;
+    padding-top: 10rem;
     height: 200vh;
 }
 
 .title {
     background: #fff;
-    height: 20%;
     margin-bottom: 20px;
 }
 
@@ -23,7 +22,28 @@
 
 .projectsContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
     gap: 20px;
     height: 80%;
 }
+
+@media screen and (min-width: 500px ){
+    .container {
+        height: 100vh;
+    }
+    .projectsContainer {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (min-width: 900px ){
+    .container {
+        height: 100vh;
+    }
+
+    .projectsContainer {
+        margin: 20px;
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+}
+

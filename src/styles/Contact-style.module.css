@@ -1,17 +1,22 @@
 .container {
     height: 100vh;
-    padding-top: 70px;
+    padding-top: 10rem;
     background: white;
 }
 
-.flexContainer {
+.formContainer {
     display: flex;
     flex-flow: column;
-    margin: 20px;
+    margin: 40px 20px;
     height: 90%;
 }
-.title{
+
+.title {
     height: 10%;
+}
+
+.wrapper {
+    display: inherit;
 }
 
 input, textarea {
@@ -19,23 +24,25 @@ input, textarea {
     border: solid 1px #e6e6e6;
 }
 
-.flexContainer label {
+.emailAndName {
+    display: contents;
+}
+
+.formContainer label {
     padding: 5px;
     font-size: 1.6rem;
     color: #5a5a5a;
 }
 
-.flexContainer input {
+.formContainer input {
     padding: 10px;
     font-size: 1.5rem;
 }
 
-.flexContainer input {
-}
+.formContainer input {}
 
 textarea {
     display: block;
-    margin-top: 20px;
     padding: calc(0.75em - 1px);
     max-width: 100%;
     min-width: 100%;
@@ -43,7 +50,7 @@ textarea {
 }
 
 button[type="submit"] {
-    margin-top: 50px;
+    margin: 1rem auto 0 auto;
     padding: 10px;
     border: 2px solid #3e92cc;
     border-radius: 50px;
@@ -51,4 +58,34 @@ button[type="submit"] {
     color: #3e92cc;
     font-size: 1.6rem;
     font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        height: 80vh;
+    }
+    .emailAndName {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .formContainer {
+        margin: 20px auto;
+        width: 80%;
+    }
+    button[type="submit"] {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .formContainer {
+        width: 50%;
+    }
 }

@@ -1,13 +1,44 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react'
 
 import styles from '../styles/Nav-style.module.css'
 
 function Nav() {
-    const [showMobileView, setShowMobileView] = useState(false)
+    const [showMobileView, setShowMobileView] = useState(true)
+
+    useWindowSize()
 
     const handleClick = () => {
-        setShowMobileView(prev => { return !prev })
+        if (window.innerWidth >= 900) {
+            setShowMobileView(true)
+        } else {
+            setShowMobileView(prev => { return !prev })
+        }
     }
+
+    // Hook
+    function useWindowSize() {
+        useEffect(() => {
+            // Handler to call on window resize
+            function handleResize() {
+                if (window.innerWidth >= 900) {
+                    setShowMobileView(true)
+                } else {
+                    setShowMobileView(false)
+                }
+            }
+
+            // Add event listener
+            window.addEventListener("resize", handleResize);
+
+            // Call handler right away so state gets updated with initial window size
+            handleResize();
+
+            // Remove event listener on cleanup
+            return () => window.removeEventListener("resize", handleResize);
+        }, []); // Empty array ensures that effect is only run on mount
+    }
+
     const NavigationList = () => {
         return (
             <ul className={styles.navigation}>

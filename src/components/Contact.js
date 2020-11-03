@@ -41,14 +41,21 @@ function Contact() {
     return (
         <div id='contact' className={styles.container}>
             <h1 className={styles.title}>Kontakt</h1>
-            <form className={styles.flexContainer} onSubmit={handleSubmitForm}>
-                <label htmlFor="email">Email</label>
-                <input type="email" name="email" value={formData.email} id="email" onChange={handleFormChange} />
-                <label htmlFor="name">Name</label>
-                <input type="text" value={formData.name} id="name" name="name" onChange={handleFormChange} />
+            <form className={styles.formContainer} onSubmit={handleSubmitForm}>
+                <div className={styles.emailAndName}>
+                    <div className={styles.wrapper}>
+                        <label htmlFor="email">Email</label>
+                        <input type="email" name="email" value={formData.email} id="email" onChange={handleFormChange} />
+                    </div>
+                    <div className={styles.wrapper}>
+                        <label htmlFor="name">Imię i nazwisko</label>
+                        <input type="text" value={formData.name} id="name" name="name" onChange={handleFormChange} />
+                    </div>
+                </div>
+                <label htmlFor="content">Wiadomość</label>
                 <textarea name="content" value={formData.content} rows="10" onChange={handleFormChange}></textarea>
                 <label>{serverMassage}</label>
-                <button type="submit">Submit</button>
+                <button type="submit">Wyślij</button>
             </form>
         </div>
     )

@@ -1,8 +1,8 @@
 .container {
-    display: grid;
-    grid-template-rows: 1fr 1fr 2fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     height: 100vh;
-    padding-top: 10rem;
 }
 
 .me {
@@ -12,7 +12,8 @@
 }
 
 .container p {
-    margin: 0 2rem;
+    padding: 2rem;
+    margin: 2rem;
 }
 
 @media screen and  (min-width: 900px){

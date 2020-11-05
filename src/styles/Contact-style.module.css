@@ -1,18 +1,18 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     height: 100vh;
-    padding-top: 10rem;
-    background: white;
 }
 
 .formContainer {
     display: flex;
     flex-flow: column;
     margin: 40px 20px;
-    height: 90%;
+    width: 90%;
 }
 
 .title {
-    height: 10%;
 }
 
 .wrapper {
@@ -38,8 +38,6 @@ input, textarea {
     padding: 10px;
     font-size: 1.5rem;
 }
-
-.formContainer input {}
 
 textarea {
     display: block;
@@ -77,15 +75,9 @@ button[type="submit"] {
     }
     .formContainer {
         margin: 20px auto;
-        width: 80%;
+        max-width: 600px;
     }
     button[type="submit"] {
-        width: 50%;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    .formContainer {
         width: 50%;
     }
 }

@@ -135,7 +135,7 @@
     transition-delay: 0.2s, 0s;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
     .container a svg {
         height: 50px;
     }

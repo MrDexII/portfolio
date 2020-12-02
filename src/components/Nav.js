@@ -9,7 +9,7 @@ function Nav() {
     useWindowSize()
 
     const handleClick = () => {
-        if (window.innerWidth >= 900) {
+        if (window.innerWidth >= 1200) {
             setShowMobileView(true)
         } else {
             setShowMobileView(prev => { return !prev })
@@ -21,7 +21,7 @@ function Nav() {
         useEffect(() => {
             // Handler to call on window resize
             function handleResize() {
-                if (window.innerWidth >= 900) {
+                if (window.innerWidth >= 1200) {
                     setShowMobileView(true)
                 } else {
                     setShowMobileView(false)

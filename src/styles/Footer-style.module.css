@@ -1,85 +1,87 @@
 .container {
-    height: 100vh;
-    padding-top: 10rem;
-    background-color: #0d3a59;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  height: 100vh;
+  padding-top: 10rem;
+  background-color: #0d3a59;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .title {
-    color: white;
-    font-size: 3rem;
+  color: white;
+  font-size: 3rem;
 }
 
 .secondTitle {
-    color: #fff;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: -5rem;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: -5rem;
 }
 
 .container ul {
-    text-align: center;
-    font-size: 1.6rem;
-    list-style-type: none;
+  text-align: center;
+  font-size: 1.6rem;
+  list-style-type: none;
 }
 
 .container ul a {
-    display: block;
-    text-decoration: none;
-    color: #cdcdcd;
-    padding: 20px;
+  display: block;
+  text-decoration: none;
+  color: #cdcdcd;
+  padding: 20px;
 }
 
 .links {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 2rem 0;
-    /* margin-top: -2rem; */
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  /* margin-top: -2rem; */
+  width: 100%;
 }
 
 .links span {
-    border: 2px solid white;
-    border-radius: 100%;
-    padding: 20px;
-    transition: 0.25s;
+  border: 2px solid white;
+  border-radius: 100%;
+  padding: 20px;
+  transition: 0.25s;
 }
 
 .links svg {
-    margin: -0.7rem -0.7rem;
-    transition: 0.6s;
-    fill: white;
+  margin: -0.7rem -0.7rem;
+  transition: 0.6s;
+  fill: white;
 }
 
 .links a:hover svg {
-    fill: #3e92cc;
+  fill: #3e92cc;
 }
 
 .links a:hover span {
-    background-color: white;
+  background-color: white;
 }
 
 @media screen and (min-width: 500px) {
-    .container {
-        height: 20vh;
-        background-color: white;
-        padding-top: 0rem;
-    }
-    .title, .secondTitle, .container ul {
-        display: none;
-    }
-    .container span {
-        border-color: #000;
-    }
-    .container svg {
-        fill: #000;
-    }
+  .container {
+    height: 20vh;
+    background-color: white;
+    padding-top: 0rem;
+  }
+  .title,
+  .secondTitle,
+  .container ul {
+    display: none;
+  }
+  .container span {
+    border-color: #000;
+  }
+  .container svg {
+    fill: #000;
+  }
 
-    .links a:hover span {
-        border-color: #3e92cc;
-    }
+  .links a:hover span {
+    border-color: #3e92cc;
+  }
 }

@@ -1,80 +1,81 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
 }
 
 .formContainer {
-    display: flex;
-    flex-flow: column;
-    margin: 40px 20px;
-    width: 90%;
+  display: flex;
+  flex-flow: column;
+  margin: 40px 20px;
+  width: 90%;
 }
 
 .wrapper {
-    display: inherit;
+  display: inherit;
 }
 
-input, textarea {
-    border-radius: 5px;
-    border: solid 1px #e6e6e6;
+input,
+textarea {
+  border-radius: 5px;
+  border: solid 1px #e6e6e6;
 }
 
 .emailAndName {
-    display: contents;
+  display: contents;
 }
 
 .formContainer label {
-    padding: 5px;
-    font-size: 1.6rem;
-    color: #5a5a5a;
+  padding: 5px;
+  font-size: 1.6rem;
+  color: #5a5a5a;
 }
 
 .formContainer input {
-    padding: 10px;
-    font-size: 1.5rem;
+  padding: 10px;
+  font-size: 1.5rem;
 }
 
 textarea {
-    display: block;
-    padding: calc(0.75em - 1px);
-    max-width: 100%;
-    min-width: 100%;
-    resize: vertical;
+  display: block;
+  padding: calc(0.75em - 1px);
+  max-width: 100%;
+  min-width: 100%;
+  resize: vertical;
 }
 
 button[type="submit"] {
-    margin: 1rem auto 0 auto;
-    padding: 10px;
-    border: 2px solid #3e92cc;
-    border-radius: 50px;
-    background: transparent;
-    color: #3e92cc;
-    font-size: 1.6rem;
-    font-weight: bold;
-    width: 100%;
-    cursor: pointer;
+  margin: 1rem auto 0 auto;
+  padding: 10px;
+  border: 2px solid #3e92cc;
+  border-radius: 50px;
+  background: transparent;
+  color: #3e92cc;
+  font-size: 1.6rem;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 500px) {
-    .container {
-        height: 80vh;
-    }
-    .emailAndName {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-    .formContainer {
-        margin: 20px auto;
-        max-width: 600px;
-    }
-    button[type="submit"] {
-        width: 50%;
-    }
+  .container {
+    height: 80vh;
+  }
+  .emailAndName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .formContainer {
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  button[type="submit"] {
+    width: 50%;
+  }
 }

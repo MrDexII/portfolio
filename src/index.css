@@ -1,58 +1,60 @@
 /*https://coolors.co/0d2130-3e92cc-9c9c9c-0d3a59-ffffff*/
 
 h6 {
-    color: #0d2130;
-    color: #0d3a59;
-    color: #3e92cc;
-    color: #9c9c9c;
-    color: #ffffff;
+  color: #0d2130;
+  color: #0d3a59;
+  color: #3e92cc;
+  color: #9c9c9c;
+  color: #ffffff;
 }
 
 /* reset  */
 
 html {
-    box-sizing: border-box;
-    font-size: 10px;
+  box-sizing: border-box;
+  font-size: 10px;
 }
 
-*, *:before, *::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+*,
+*:before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 /* ************************************************** */
 
 html::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    /* border-radius: 10px; */
-    background-color: white;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  /* border-radius: 10px; */
+  background-color: white;
 }
 
 html::-webkit-scrollbar {
-    width: 5px;
-    background-color: #3e92cc;
+  width: 5px;
+  background-color: #3e92cc;
 }
 
 html::-webkit-scrollbar-thumb {
-    /* border-radius: 10px; */
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #3e92cc;
+  /* border-radius: 10px; */
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #3e92cc;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 4rem;
-    font-weight: 500;
-    text-align: center;
-    color: #0D2130;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+  color: #0d2130;
 }
 
 p {
-    font-size: 2rem;
-    text-align: center;
+  font-size: 2rem;
+  text-align: center;
 }

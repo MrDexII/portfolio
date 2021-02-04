@@ -1,18 +1,14 @@
-import React from 'react'
-import Projects from './Projects'
-// import About from './About'
-import Contact from './Contact'
-
-// import styles from '../styles/Main-style.module.css'
+import React from "react";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 function Main() {
-    return (
-        <>
-            {/* <About /> */}
-            <Projects />
-            <Contact />
-        </>
-    )
+  return (
+    <>
+      <Projects />
+      <Contact />
+    </>
+  );
 }
 
-export default Main
+export default Main;

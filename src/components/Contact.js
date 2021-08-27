@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/Contact-style.module.css";
+import config from "../config.json"
 
 function Contact() {
   const defaultFormData = {
@@ -18,7 +19,7 @@ function Contact() {
   };
 
   const handleSubmitForm = (event) => {
-    const host = "http://localhost:8080/";
+    const host = config.MAIL_SENDER_HOST_URL;
     event.preventDefault();
     const sendEmail = async () => {
       const url = host + "api/send-email";

@@ -8,7 +8,7 @@ function Hero() {
       <div className={styles.titleDescription}>
         <h1 className={styles.title}>Cześć</h1>
         <p className={styles.textContent}>
-          Mam na imię Andrzej i jestem początkującym developerem, a to jest
+          Mam na imię Andrzej i jestem początkującym deweloperem, a to jest
           strona z moimi projektami
         </p>
       </div>

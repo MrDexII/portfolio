@@ -6,17 +6,17 @@
   flex-direction: column;
   justify-content: space-evenly;
   height: 250vh;
+  background-color: #333;
 }
 
 .titleDescription {
-  background: #fff;
   margin-top: 5rem;
   height: 14%;
 }
 
 .titleDescription h1,
 .titleDescription p {
-  color: #000;
+  color: #fff;
   padding: 10px;
 }
 
@@ -28,7 +28,7 @@
 .projectsContainer {
   display: grid;
   grid-template-columns: repeat(1, minmax(200px, 1fr));
-  grid-auto-rows: 25%;
+  grid-auto-rows: 24%;
   justify-content: center;
   gap: 20px;
   margin-bottom: 5rem;
@@ -38,6 +38,12 @@
 @media screen and (min-width: 650px) {
   .container {
     height: 100vh;
+    background-color: white;
+    background-image: url(../images/wave-background.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
   }
   .projectsContainer {
     grid-template-columns: repeat(2, minmax(200px, 1fr));

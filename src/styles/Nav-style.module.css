@@ -10,9 +10,63 @@
 
 .container a svg {
   height: 25px;
-  margin-left: 10px;
   margin-top: 10px;
-  transition: 0.25s;
+}
+
+#up,
+#mid,
+#down {
+  /* transition: all 0.5s 0.2s ease; */
+  fill: black;
+}
+
+#up {
+  animation: up-animation 1s 1;
+}
+
+#mid {
+  animation: mid-animation 2s 1;
+}
+
+#down {
+  animation: down-animation 3s 1;
+}
+
+@keyframes up-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-100%) rotateZ(90deg);
+  }
+  to {
+    opacity: 100;
+    transform: translateY(0%) rotateX(0);
+  }
+}
+
+@keyframes mid-animation {
+  from {
+    opacity: 0;
+    transform: translateX(-200%) rotateZ(90deg);
+    /* transform: rotateX(180deg); */
+  }
+  to {
+    opacity: 100;
+    transform: translateY(0%) rotateZ(0);
+    /* transform: rotateX(0); */
+  }
+}
+
+@keyframes down-animation {
+  from {
+    opacity: 0;
+    transform: translateX(100%) rotateZ(-90deg);
+    /* transform: rotateX(180deg); */
+  }
+  to {
+    opacity: 100;
+    transform: translateY(0%) rotateZ(0);
+    /* transform: rotateX(0); */
+  }
 }
 
 .navigation {

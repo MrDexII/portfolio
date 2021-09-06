@@ -8,7 +8,7 @@
 
 /* logo */
 
-.container a svg {
+#logo {
   height: 25px;
   margin-top: 10px;
 }
@@ -16,7 +16,6 @@
 #up,
 #mid,
 #down {
-  /* transition: all 0.5s 0.2s ease; */
   fill: black;
 }
 
@@ -47,12 +46,10 @@
   from {
     opacity: 0;
     transform: translateX(-200%) rotateZ(90deg);
-    /* transform: rotateX(180deg); */
   }
   to {
     opacity: 100;
     transform: translateY(0%) rotateZ(0);
-    /* transform: rotateX(0); */
   }
 }
 
@@ -60,12 +57,10 @@
   from {
     opacity: 0;
     transform: translateX(100%) rotateZ(-90deg);
-    /* transform: rotateX(180deg); */
   }
   to {
     opacity: 100;
     transform: translateY(0%) rotateZ(0);
-    /* transform: rotateX(0); */
   }
 }
 

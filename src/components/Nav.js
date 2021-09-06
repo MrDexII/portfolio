@@ -83,6 +83,7 @@ function Nav() {
     <div className={styles.container}>
       <a href="#home">
         <svg
+        id={styles.logo}
           width="80"
           height="57"
           viewBox="0 0 80 57"
@@ -94,8 +95,8 @@ function Nav() {
             <path id={styles.mid} d="M0.5 57L8 44L48.5 27L80 17L0.5 57Z" />
             <path
               id={styles.up}
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M48.5 27L33 0L8 44L18 40L33 15L41.5 30.0984L48.5 27Z"
             />
           </g>

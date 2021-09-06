@@ -56,6 +56,25 @@ button[type="submit"] {
   font-weight: bold;
   width: 100%;
   cursor: pointer;
+  transition: .5s;
+}
+
+button[type="submit"]:hover {
+  color: white;
+  border-color: white;
+  background-color: #3e92cc;
+}
+
+.formContainer span {
+  font-size: 1.6rem;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
 }
 
 @media screen and (min-width: 500px) {

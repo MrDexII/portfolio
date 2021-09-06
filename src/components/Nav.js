@@ -82,9 +82,24 @@ function Nav() {
   return (
     <div className={styles.container}>
       <a href="#home">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.019 12.272">
-          <path d="M10.474 6.445l-2.275-.697 8.82-3.877zM11.01 10.241l-.494-.838.954-1.14 1.148 1.978z" />
-          <path d="M8.199 5.748L7.065 0l3.409 6.445L0 12.272 7.065 0l1.134 5.748-1.197-2.247-2.52 4.345z" />
+        <svg
+        id={styles.logo}
+          width="80"
+          height="57"
+          viewBox="0 0 80 57"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id={styles.logo}>
+            <path id={styles.down} d="M56 40L50.5 43.5L54 49.5H61.5L56 40Z" />
+            <path id={styles.mid} d="M0.5 57L8 44L48.5 27L80 17L0.5 57Z" />
+            <path
+              id={styles.up}
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M48.5 27L33 0L8 44L18 40L33 15L41.5 30.0984L48.5 27Z"
+            />
+          </g>
         </svg>
       </a>
       <button

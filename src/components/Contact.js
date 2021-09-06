@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/Contact-style.module.css";
-import config from "../config.json"
+import config from "../config.json";
 
 function Contact() {
   const defaultFormData = {
@@ -9,8 +9,13 @@ function Contact() {
     content: "",
   };
 
+  const defaultServerResponse = {
+    message: "",
+    status: undefined,
+  };
+
   const [formData, setFormData] = useState(defaultFormData);
-  const [serverMassage, setServerMassage] = useState("");
+  const [serverResponse, setServerResponse] = useState(defaultServerResponse);
 
   const handleFormChange = ({ target }) => {
     setFormData((prevState) => {
@@ -22,21 +27,34 @@ function Contact() {
     const host = config.MAIL_SENDER_HOST_URL;
     event.preventDefault();
     const sendEmail = async () => {
-      const url = host + "api/send-email";
-      const response = await fetch(url, {
-        method: "POST",
-        mode: "cors",
-        cache: "no-cache",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const message = await response.text();
-      setServerMassage(message);
+      try {
+        const url = host + "api/send-email";
+        const response = await fetch(url, {
+          method: "POST",
+          mode: "cors",
+          cache: "no-cache",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+        const message = await response.text();
+        const status = response.status;
+        setServerResponse({ message: message, status: status });
+      } catch (error) {
+        console.error(error);
+        setServerResponse({ message: error.toString() + " Problem z serwisem zewnętrznym", status: 500 });
+      }
     };
-    sendEmail();
-    setFormData(defaultFormData);
+    if (!formData.email || !formData.name || !formData.content) {
+      setServerResponse({
+        message: "Wszystkie pola w formularzu są wymagane",
+        status: 404,
+      });
+    } else {
+      sendEmail();
+      setFormData(defaultFormData);
+    }
   };
 
   return (
@@ -72,7 +90,13 @@ function Contact() {
           rows="10"
           onChange={handleFormChange}
         ></textarea>
-        <label>{serverMassage}</label>
+        <span
+          className={`${
+            serverResponse.status === 200 ? styles.success : styles.error
+          }`}
+        >
+          {serverResponse.message}
+        </span>
         <button type="submit">Wyślij</button>
       </form>
     </div>

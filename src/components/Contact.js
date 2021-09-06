@@ -43,7 +43,7 @@ function Contact() {
         setServerResponse({ message: message, status: status });
       } catch (error) {
         console.error(error);
-        setServerResponse({ message: error.toString(), status: 500 });
+        setServerResponse({ message: error.toString() + " External service problem", status: 500 });
       }
     };
     if (!formData.email || !formData.name || !formData.content) {

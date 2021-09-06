@@ -43,12 +43,12 @@ function Contact() {
         setServerResponse({ message: message, status: status });
       } catch (error) {
         console.error(error);
-        setServerResponse({ message: error.toString() + " External service problem", status: 500 });
+        setServerResponse({ message: error.toString() + " Problem z serwisem zewnętrznym", status: 500 });
       }
     };
     if (!formData.email || !formData.name || !formData.content) {
       setServerResponse({
-        message: "Name, email and message are required",
+        message: "Wszystkie pola w formularzu są wymagane",
         status: 404,
       });
     } else {

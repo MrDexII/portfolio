@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        nowyfolder_jenkins-docker_1 {
+        jenkins-docker {
         image 'node:lts-buster-slim'
         args '-p 3000:3000'
         }

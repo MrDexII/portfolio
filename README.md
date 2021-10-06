@@ -16,7 +16,7 @@ npm start
 Uruchamia się pod standardowym dla Reacta  adresem:
 
 ```
-http://localhost:3030
+http://localhost:3000
 ```
 
 Strona korzysta z oddzielnego serwisu do wysyłania maile. Serwis ten jest napisany w języku Java.

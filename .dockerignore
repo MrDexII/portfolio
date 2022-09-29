@@ -1,0 +1,10 @@
+README.md
+Jenkinsfile
+dockerCommands.txt
+.gitignore
+build
+node_modules
+jenkins
+.dockerignore
+Dockerfile
+Dockerfile.prod

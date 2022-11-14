@@ -28,22 +28,27 @@ function Contact() {
     event.preventDefault();
     const sendEmail = async () => {
       try {
-        const url = host + "api/send-email";
+        const url = host;
         const response = await fetch(url, {
           method: "POST",
           mode: "cors",
           cache: "no-cache",
           headers: {
-            "Content-Type": "application/json",
+            "spring.cloud.function.definition": "sendEmail",
           },
           body: JSON.stringify(formData),
         });
-        const message = await response.text();
-        const status = response.status;
-        setServerResponse({ message: message, status: status });
+        const message = await response.json();
+        setServerResponse({
+          message: message.body,
+          status: message.statusCodeValue,
+        });
       } catch (error) {
         console.error(error);
-        setServerResponse({ message: error.toString() + " Problem z serwisem zewnętrznym", status: 500 });
+        setServerResponse({
+          message: error.toString() + " Problem z serwisem zewnętrznym",
+          status: 500,
+        });
       }
     };
     if (!formData.email || !formData.name || !formData.content) {

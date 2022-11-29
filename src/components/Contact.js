@@ -78,7 +78,7 @@ function Contact() {
             />
           </div>
           <div className={styles.wrapper}>
-            <label htmlFor="name">Imię i nazwisko</label>
+            <label htmlFor="name">Imię</label>
             <input
               type="text"
               value={formData.name}

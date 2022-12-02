@@ -43,13 +43,9 @@ function Project({ svg, name, image, description, buttons, id }) {
       onMouseEnter={() => {
         setFlipFace(true);
       }}
-      onMouseLeave={
-        moreInfo
-          ? ""
-          : () => {
-              setFlipFace(false);
-            }
-      }
+      onMouseLeave={() => {
+        setFlipFace(false);
+      }}
     >
       {flipFace ? <More /> : svg}
     </div>

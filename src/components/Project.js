@@ -1,25 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "../styles/Project-style.module.css";
 
 function Project({ svg, name, image, description, buttons, id }) {
   const [flipFace, setFlipFace] = useState(false);
   const [moreInfo, setMoreInfo] = useState(false);
 
-  const handleMouseEnter = () => {
-    setFlipFace((prev) => !prev);
-  };
-
   const onClickMoreEvent = () => {
     setMoreInfo((prev) => !prev);
   };
-
-  useEffect(() => {
-    if (moreInfo === true) {
-      setFlipFace(true);
-    } else {
-      setFlipFace(false);
-    }
-  }, [moreInfo]);
 
   const More = () => {
     return (
@@ -52,9 +40,16 @@ function Project({ svg, name, image, description, buttons, id }) {
       className={`${styles.container} ${flipFace ? styles.flip : ""} ${
         moreInfo ? styles.more : ""
       }`}
-      // onMouseEnter={moreInfo ? () => {} : handleMouseEnter}
-      // onMouseLeave={moreInfo ? () => {} : handleMouseEnter}
-      onMouseOver={moreInfo ? () => {} : handleMouseEnter}
+      onMouseEnter={() => {
+        setFlipFace(true);
+      }}
+      onMouseLeave={
+        moreInfo
+          ? ""
+          : () => {
+              setFlipFace(false);
+            }
+      }
     >
       {flipFace ? <More /> : svg}
     </div>

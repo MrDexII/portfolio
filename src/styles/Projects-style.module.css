@@ -60,3 +60,19 @@
     height: 50%;
   }
 }
+
+@media screen and (max-height: 500px) {
+  .titleDescription {
+    padding: 0;
+    margin: 0;
+  }
+  .titleDescription h1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .titleDescription p {
+    padding: 0;
+    margin: 0;
+  }
+}

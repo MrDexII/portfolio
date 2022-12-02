@@ -78,9 +78,6 @@ button[type="submit"]:hover {
 }
 
 @media screen and (min-width: 500px) {
-  .container {
-    height: 80vh;
-  }
   .emailAndName {
     display: flex;
     justify-content: space-between;
@@ -96,5 +93,11 @@ button[type="submit"]:hover {
   }
   button[type="submit"] {
     width: 50%;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .container{
+    height: auto;
   }
 }

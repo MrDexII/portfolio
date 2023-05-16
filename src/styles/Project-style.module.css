@@ -26,16 +26,45 @@
   width: 100%;
 }
 
-.maxIcone {
+#maxIcon {
   position: absolute;
-  top: 0;
-  left: calc(100% - 5rem);
-  margin: 2% 0;
-
-  border: 0;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
 }
 
-.flip img {
+#topRight:hover {
+  animation: topRight-animation 1s 1;
+}
+
+@keyframes topRight-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-100%) rotateZ(90deg);
+  }
+  to {
+    opacity: 100;
+    transform: translateY(0%) rotateX(0);
+  }
+}
+
+#downLeft:hover {
+  animation: downLeft-animation 1s 1;
+}
+
+@keyframes downLeft-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-100%) rotateZ(90deg);
+  }
+  to {
+    opacity: 100;
+    transform: translateY(0%) rotateX(0);
+  }
+}
+
+.fliped_image {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

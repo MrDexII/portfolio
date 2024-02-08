@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../styles/Project-style.module.css";
+import styles from "./Project-style.module.css";
 
 function Project({ svg, name, image, description, buttons, id }) {
   const [flipFace, setFlipFace] = useState(false);

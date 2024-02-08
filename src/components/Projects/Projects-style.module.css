@@ -39,7 +39,7 @@
   .container {
     height: 100vh;
     background-color: white;
-    background-image: url(../images/wave-background.svg);
+    background-image: url(../../images/wave-background.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 
-import styles from "../styles/Nav-style.module.css";
+import styles from "./Nav-style.module.css";
 
 function Nav() {
   const [showMobileView, setShowMobileView] = useState(true);

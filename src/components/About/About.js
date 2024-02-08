@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/About-style.module.css";
+import styles from "./About-style.module.css";
 
 function About() {
   return (

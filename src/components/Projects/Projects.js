@@ -1,11 +1,11 @@
 import React from 'react'
-import Project from '../components/Project'
-import styles from '../styles/Projects-style.module.css'
-import image_styles from '../styles/Project-style.module.css'
-import pokemonImage from '../images/cards images/pokemon-API.png'
-import gameImage from '../images/cards images/game.png'
-import webScraping from '../images/cards images/wyniki-meczow-pilkarskich.png'
-import computingImage from  '../images/cards images/obliczenia-ewolucyjne.png'
+import Project from '../Project/Project'
+import styles from './Projects-style.module.css'
+import image_styles from '../Project/Project-style.module.css'
+import pokemonImage from '../../images/cards images/pokemon-API.png'
+import gameImage from '../../images/cards images/game.png'
+import webScraping from '../../images/cards images/wyniki-meczow-pilkarskich.png'
+import computingImage from  '../../images/cards images/obliczenia-ewolucyjne.png'
 
 const projectsTab = [
     {

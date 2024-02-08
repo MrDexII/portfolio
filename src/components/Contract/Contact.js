@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "../styles/Contact-style.module.css";
-import config from "../config.json";
+import styles from "./Contact-style.module.css";
+import config from "../../config.json";
 
 function Contact() {
   const defaultFormData = {

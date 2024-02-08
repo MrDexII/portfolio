@@ -1,6 +1,6 @@
 import React from "react";
-import Projects from "./Projects";
-import Contact from "./Contact";
+import Projects from "./Projects/Projects";
+import Contact from "./Contract/Contact";
 
 function Main() {
   return (
